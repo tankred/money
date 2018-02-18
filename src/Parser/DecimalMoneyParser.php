@@ -84,7 +84,7 @@ final class DecimalMoneyParser implements MoneyParser
             $decimal .= $matches['fraction'];
             $decimal = Number::roundMoneyValue($decimal, $subunit, $fractionDigits);
 
-            if ($fractionDigits > $subunit) {
+            if ($fractionDigits >= $subunit) {
                 $decimal = substr($decimal, 0, $subunit - $fractionDigits);
             } elseif ($fractionDigits < $subunit) {
                 $decimal .= str_pad('', $subunit - $fractionDigits, '0');
