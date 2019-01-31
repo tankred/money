@@ -35,7 +35,7 @@ final class IndirectExchangeTest extends TestCase
             ],
             'AFN' => [
                 'DZD' => 12,
-                'EUR' => 8,
+                'EUR' => 10,
             ],
             'EUR' => [
                 'AOA' => 3,

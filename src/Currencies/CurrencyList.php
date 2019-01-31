@@ -23,7 +23,7 @@ final class CurrencyList implements Currencies
     public function __construct(array $currencies)
     {
         foreach ($currencies as $currencyCode => $subunit) {
-            if (empty($currencyCode) || !is_string($currencyCode)) {
+            if (!is_null($currencyCode) && $currencyCode !== '' || !is_string($currencyCode)) {
                 throw new \InvalidArgumentException(
                     sprintf('Currency code must be a string and not empty. "%s" given', $currencyCode)
                 );
